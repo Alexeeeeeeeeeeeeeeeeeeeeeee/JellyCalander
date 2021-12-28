@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jelly Calendar</title>
+    <!-- Styles -->
+    <link rel="stylesheet" href="icons/css/all.css">
+    <link rel="stylesheet" href="styles/calender.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/addActivaty.css">
+</head>
+<body>
+    <div class="container0">
+        <div class="container">
+            <!-- Top menu bar-->
+            <div class="menu">
+                <div class="first"><button class="lastMonth first"><i class="fas fa-angle-left"></i></button></div>
+                <div><button class="month"></button></div>
+                <div></i><button class="nextMonth"><i class="fas fa-angle-right"></i></button></div>
+                <div><button class="year"></button></div>
+                <div><button class="home"><i class="fas fa-home"></i></button></div>
+                <div class="last"><button class="plus last"><i class="fas fa-plus"></i></button></div>
+            </div>
+            <!-- Calendar content -->
+            <div class="calendar"></div>
+        </div>
+        <!-- Add activaty -->
+        <div class="addActivaty">
+            <div class="actName">
+                <input id="actName" class="actName fa" type="text" placeholder="事件..">
+                <label class="fas fa-pencil-alt input-icon" for="actName"></label>    
+            </div>
+            <div class="colors">
+                <button class="C1"></button>
+                <button class="C2"></button>
+                <button class="C3"></button>
+                <button class="C4"></button>
+                <button class="C5"></button>
+                <button class="C6"></button>
+                <button class="C7"></button>
+                <button class="C8"></button>
+            </div>
+            <div class="time">
+                <div>Start</div>
+                <div>--</div>
+                <div>End</div>
+            </div>
+            <div class="buttons">
+                <button class="submit"><i class="fas fa-check"></i></button>
+                <button class="exit"><i class="fas fa-times"></i></button>
+            </div>
+        </div>
+    </div>
+    <script src="scripts/calendarScripts.js"></script>
+</body>
+</html>

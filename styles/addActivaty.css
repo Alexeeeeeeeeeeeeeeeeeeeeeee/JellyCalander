@@ -1,0 +1,126 @@
+.addActivaty{
+    display: grid;
+    grid-template-rows: 1fr, 1fr, 1fr, 1fr;
+    background-color: #313133;
+    border-radius: 50px;
+    border: 0.25rem solid rgba(110, 228, 218, 1);
+    position: absolute;
+    padding: 5px;
+    width: 70vw;
+    height: 80vh;
+    box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, 0.19);
+}
+
+/* Activity name */
+.addActivaty > div.actName > input.actName{
+    border: none;
+    border-bottom: 2px solid rgba(110, 228, 218, 1);
+    background-color: transparent;
+    color: rgb(207, 207, 207);
+    font-size: 300%;
+    width: 100%;
+    padding-left: 1rem;
+    padding-right: 6rem;
+}
+.addActivaty > div.actName{
+    display: flex;
+    position: relative;
+}
+.addActivaty > div.actName > input.actName::placeholder{
+    color: rgb(175, 175, 175);
+}
+.addActivaty > div.actName > label.input-icon{
+    color: rgb(175, 175, 175);
+    position: absolute;
+    left: calc(100% - 1.5em);
+    top: calc(50% - 0.5em); /* Keep icon in center of input, regardless of the input height */
+    font-size: 3rem;
+}
+.addActivaty > div.actName > input.actName:focus{
+    outline: none; /* Focus outline */
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    background-color: rgb(66, 70, 82);
+}
+/* Select color */
+.addActivaty > .colors{
+    display: grid;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+    gap: 10px;
+}
+.addActivaty > .colors > button{
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    background-color: rgb(138, 138, 138);
+    border: 3px solid transparent;
+}
+.addActivaty > .colors > button.C1{
+    background-color:rgb(230, 45, 85);
+}
+.addActivaty > .colors > button.C2{
+    background-color: aquamarine;
+}
+.addActivaty > .colors > button.C3{
+    background-color: cornflowerblue;
+}
+.addActivaty > .colors > button.C4{
+    background-color:dodgerblue;
+}
+.addActivaty > .colors > button.C5{
+    background-color:gold;
+}
+.addActivaty > .colors > button.C6{
+    background-color: bisque;
+}
+.addActivaty > .colors > button.C7{
+    background-color:darksalmon;
+}
+.addActivaty > .colors > button.C8{
+    background-color:darkorange;
+}
+.addActivaty > .colors > button:hover{
+    /* show "check" icon*/
+}
+/* Set time*/
+
+
+/* Buttons */
+.addActivaty > .buttons{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.addActivaty > .buttons > *{
+    border-radius: 20px;
+    /* border: 2px solid rgba(110, 228, 218, 1); */
+    border: none;
+    height: max-content;
+    width: 5rem;
+    font-size: 4rem;
+    color: rgb(207, 207, 207);
+    background-color: transparent;
+}
+.addActivaty > .buttons > .submit{
+    color: rgb(46, 46, 46);
+    background-color: rgb(51, 230, 45);
+}
+.addActivaty > .buttons > .exit{
+    color: rgb(46, 46, 46);
+    background-color: rgb(230, 45, 85);
+}
+.addActivaty > .buttons > .submit:hover{
+    color: rgb(46, 46, 46);
+    background-color: rgb(121, 238, 117);
+}
+.addActivaty > .buttons > .exit:hover{
+    color: rgb(46, 46, 46);
+    background-color: rgb(231, 95, 124);
+}

@@ -1,0 +1,33 @@
+.menu {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 3fr 1fr 1fr;
+    gap: 1px;
+    padding: 3px;
+    background-color: #313133;
+}
+.menu * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+.menu *[class~="first"] {
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.menu *[class~="last"] {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.menu > * > button:hover {
+    background-color: rgb(74, 102, 145);
+}
+.menu > * > button {
+    height: 100%;
+    width: 100%;
+    font-size: 200%;
+    color: rgb(207, 207, 207);
+    background-color: transparent;
+    border: hidden
+}

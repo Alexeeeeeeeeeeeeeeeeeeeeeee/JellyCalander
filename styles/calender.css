@@ -1,0 +1,82 @@
+/* Initialize */
+*{ 
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0;
+    /* unselecteble */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.container0{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: grid;
+    padding: 6px;
+    border-radius: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 8fr;
+    gap: 3px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(110, 228, 218);
+}
+.calendar {
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    padding: 3px;
+    gap: 3px;
+    background-color: #313133;
+}
+.calendar > div {
+    display: flex;
+    justify-content: center;
+    color: #54545a;
+    border-radius: 2px;
+    font-size: 150%;
+    background-color: rgb(179, 181, 211);
+    border: 2px solid;
+    border-color: transparent;
+}
+/* Four Edges */
+.calendar > div[class ~= ul] {
+    border-top-left-radius: 8px;
+}
+.calendar > div[class ~= ll] {
+    border-bottom-left-radius: 8px;
+}
+.calendar > div[class ~= ur] {
+    border-top-right-radius: 8px;
+}
+.calendar > div[class ~= lr] {
+    border-bottom-right-radius: 8px;
+}
+/* Weekends */
+.calendar > div[class~=weekend] {
+    background-color: rgb(204, 133, 183);
+}
+/* Not Current Month */
+.calendar > div:not(.current){
+    color: rgb(173, 173, 173);
+    background-color: rgb(75, 75, 92);
+}
+.calendar > div.weekend:not(.current){
+    color: rgb(173, 173, 173);
+    background-color: rgb(71, 34, 53);
+}
+/* Today */
+.calendar > div.today{
+    background-color: rgb(110, 228, 218);
+}
+/* Hover */
+.calendar > div:hover {
+    color: #54545a !important;
+    background-color: rgb(110, 228, 218) !important;
+}
