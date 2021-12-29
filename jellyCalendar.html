@@ -20,7 +20,7 @@
                 <div></i><button class="nextMonth"><i class="fas fa-angle-right"></i></button></div>
                 <div><button class="year"></button></div>
                 <div><button class="home"><i class="fas fa-home"></i></button></div>
-                <div class="last"><button class="plus last"><i class="fas fa-plus"></i></button></div>
+                <div class="last"><button class="plus last" onclick="showAddActivity()"><i class="fas fa-plus"></i></button></div>
             </div>
             <!-- Calendar content -->
             <div class="calendar"></div>
@@ -32,26 +32,27 @@
                 <label class="fas fa-pencil-alt input-icon" for="actName"></label>    
             </div>
             <div class="colors">
-                <button class="C1"></button>
-                <button class="C2"></button>
-                <button class="C3"></button>
-                <button class="C4"></button>
-                <button class="C5"></button>
-                <button class="C6"></button>
-                <button class="C7"></button>
-                <button class="C8"></button>
+                <button class="C1"><i class="fas fa-check"></i></button>
+                <button class="C2"><i class="fas fa-check"></i></button>
+                <button class="C3"><i class="fas fa-check"></i></button>
+                <button class="C4"><i class="fas fa-check"></i></button>
+                <button class="C5"><i class="fas fa-check"></i></button>
+                <button class="C6"><i class="fas fa-check"></i></button>
+                <button class="C7"><i class="fas fa-check"></i></button>
+                <button class="C8"><i class="fas fa-check"></i></button>
             </div>
             <div class="time">
-                <div>Start</div>
-                <div>--</div>
-                <div>End</div>
+                <input type="time" class="s Time" id="sTime" value="08:00">
+                <i class="fas fa-caret-right Label"></i>
+                <input type="time" class="e Time" id="eTime" value="09:00">
             </div>
             <div class="buttons">
                 <button class="submit"><i class="fas fa-check"></i></button>
-                <button class="exit"><i class="fas fa-times"></i></button>
+                <button class="exit" onclick="exitAddActivaty()"><i class="fas fa-times"></i></button>
             </div>
         </div>
     </div>
     <script src="scripts/calendarScripts.js"></script>
+    <script src="scripts/addActivity.js"></script>
 </body>
 </html>

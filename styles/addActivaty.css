@@ -1,5 +1,5 @@
 .addActivaty{
-    display: grid;
+    display: none;
     grid-template-rows: 1fr, 1fr, 1fr, 1fr;
     background-color: #313133;
     border-radius: 50px;
@@ -83,11 +83,46 @@
 .addActivaty > .colors > button.C8{
     background-color:darkorange;
 }
-.addActivaty > .colors > button:hover{
+.addActivaty > .colors .fas{
+    /* disable "check" icon*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 150%;
+    color: transparent;
+}
+.addActivaty > .colors .fas:hover{
     /* show "check" icon*/
+    color: #313133 !important; 
 }
 /* Set time*/
-
+.addActivaty > .time{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+.time > .Label{
+    display: flex;
+    height: max-content;
+    width: 25%;
+    justify-content: center; /* Only work if display is "flex" or "grid" */
+    align-items: center;     /* Only work if display is "flex" or "grid" */
+    background-color: transparent;
+    font-size: 4rem;
+    color: rgb(207, 207, 207);
+} 
+.time > input.Time{
+    height: 4rem;
+    width: 75%;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(174, 203, 236);
+    font-size: 140%;
+}
 
 /* Buttons */
 .addActivaty > .buttons{
