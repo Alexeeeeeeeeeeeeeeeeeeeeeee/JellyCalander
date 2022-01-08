@@ -2,7 +2,7 @@
     display: none;
     grid-template-rows: 1fr, 1fr, 1fr, 1fr;
     background-color: #313133;
-    border-radius: 50px;
+    border-radius: 8px;
     border: 0.25rem solid rgba(110, 228, 218, 1);
     position: absolute;
     padding: 5px;
@@ -38,8 +38,8 @@
 }
 .addActivaty > div.actName > input.actName:focus{
     outline: none; /* Focus outline */
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     background-color: rgb(66, 70, 82);
 }
 /* Select color */

@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jelly Calendar</title>
+    <!-- jquery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Styles -->
     <link rel="stylesheet" href="icons/css/all.css">
     <link rel="stylesheet" href="styles/calender.css">
     <link rel="stylesheet" href="styles/menu.css">
     <link rel="stylesheet" href="styles/addActivaty.css">
+    <link rel="stylesheet" href="styles/menu2.css">
 </head>
 <body>
     <div class="container0">
@@ -22,13 +25,18 @@
                 <div><button class="home"><i class="fas fa-home"></i></button></div>
                 <div class="last"><button class="plus last" onclick="showAddActivity()"><i class="fas fa-plus"></i></button></div>
             </div>
+            <div class="menu2">
+                <div class="first"><button class="submit first"><i class="fas fa-check"></i></button></div>
+                <div><button class="undo"><i class="fas fa-undo-alt"></i></button></div>
+                <div class="last"><button class="cancel last"><i class="fas fa-times"></i></button></div>
+            </div>
             <!-- Calendar content -->
             <div class="calendar"></div>
         </div>
         <!-- Add activaty -->
         <div class="addActivaty">
             <div class="actName">
-                <input id="actName" class="actName fa" type="text" placeholder="事件..">
+                <input id="actName" class="actName fa" type="text" placeholder="事件.." autocomplete="off">
                 <label class="fas fa-pencil-alt input-icon" for="actName"></label>    
             </div>
             <div class="colors">

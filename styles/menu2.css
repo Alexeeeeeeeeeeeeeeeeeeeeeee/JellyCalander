@@ -1,0 +1,59 @@
+.menu2 {
+    border-radius: 10px;
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    padding: 3px;
+    background-color: #313133;
+}
+.menu2 * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+}
+/* .menu2 *[class~="first"] {
+    border-bottom-left-radius: 8px;
+    border-top-left-radius: 8px;
+}
+.menu2 *[class~="last"] {
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+} */
+
+.menu2 > * > button:hover {
+    background-color: rgb(74, 102, 145);
+}
+.menu2 > * > button {
+    border-radius: 3px;
+    height: 100%;
+    width: 50%;
+    font-size: 300%;
+    color: rgb(207, 207, 207);
+    background-color: transparent;
+    border: hidden
+}
+.menu2 button.submit{
+    color: #313133;
+    background-color: rgb(51, 230, 45);
+}
+.menu2 button.submit:hover{
+    color: #313133;
+    background-color: rgb(121, 238, 117);
+}
+.menu2 button.undo{
+    color: #313133;
+    background-color: rgb(81, 143, 214);
+}
+.menu2 button.undo:hover{
+    color: #313133;
+    background-color: rgb(122, 162, 207);
+}
+.menu2 button.cancel{
+    color: #313133;
+    background-color: rgb(230, 45, 85);
+}
+.menu2 button.cancel:hover{
+    color: #313133;
+    background-color: rgb(231, 95, 124);
+}

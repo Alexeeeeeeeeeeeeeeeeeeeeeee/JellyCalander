@@ -1,6 +1,7 @@
 .menu {
     border-radius: 10px;
     display: grid;
+    /* display: none; */
     grid-template-columns: 1fr 2fr 1fr 3fr 1fr 1fr;
     gap: 1px;
     padding: 3px;

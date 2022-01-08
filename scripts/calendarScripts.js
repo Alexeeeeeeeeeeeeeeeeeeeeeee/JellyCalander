@@ -66,7 +66,7 @@
             if (i == daysArray.length - 1) x.setAttribute("class", `weekend ${daysArray[i][1]} lr`);
             if (x.getAttribute("class") == null) x.setAttribute("class", `${daysArray[i][1]}`);
             // Set id
-            x.setAttribute("id", `${daysArray[i][1]} ${daysArray[i][0]}`);
+            x.setAttribute("id", `${daysArray[i][1]} ${daysArray[i][1]}${daysArray[i][0]}`);
             // Today
             if (daysArray[i][1] == "current" && daysArray[i][0] == currDay){
                 const temp = x.getAttribute("class");
