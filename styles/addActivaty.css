@@ -93,6 +93,9 @@
     font-size: 150%;
     color: transparent;
 }
+.addActivaty .colors button.C3 .fas{
+    color: #313133;
+}
 .addActivaty > .colors .fas:hover{
     /* show "check" icon*/
     color: #313133 !important; 

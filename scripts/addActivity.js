@@ -1,20 +1,25 @@
 {
     let activityName = "";
-    let color = "";
+    let color = "cornflowerblue";
     let sTime = "";
     let eTime = "";
     let dragActivaty = false;
+    let tempInnerHTML = "";
 
     //----------------- Add Activaty div -----------------
+    function initializeParams() {
+        activityName = "";
+        // color = "cornflowerblue"; // Color stays the same
+        sTime = "";
+        eTime = "";
+        dragActivaty = false;
+    }
     function showAddActivity(){
         document.querySelector(".addActivaty").style.display = "grid";
     }
     function exitAddActivaty(){
         document.querySelector(".addActivaty").style.display = "none";
-        activityName = "";
-        color = "";
-        sTime = "";
-        eTime = "";
+        initializeParams();
     }
     function selectColor(element) {
         color = getComputedStyle(element)['backgroundColor'];
@@ -55,24 +60,56 @@
         );
     
     //----------------- menu2 div -----------------
+    function clearTemp() {
+        tempDict.forEach( (value, key) => {
+            // console.log(value, key)
+            let temp = document.querySelector(`[id~="${key}"]`);
+            // console.log(temp)
+
+            let childs = temp.childNodes;
+            // console.log(childs)
+
+            for (let i = 1; i < childs.length; i++) {
+                if (childs[i].innerHTML == value[0]) {
+                    $(childs[i]).remove();
+                }
+            }
+        });
+        // Clear tempDict
+        tempDict = new Map();
+    }
     function cancel(){
         document.querySelector(".menu2").style.display = "none";
-        dragActivaty = false;
-        activityName = "";
-        color = "";
-        sTime = "";
-        eTime = "";
+        initializeParams();
         document.querySelector(".menu").style.display = "grid";
+        // Clear
+        clearTemp();
     }
     function undo() {
-        
+        clearTemp();
     }
     function submit() {
-        
+        document.querySelector(".menu2").style.display = "none";
+        initializeParams();
+        document.querySelector(".menu").style.display = "grid";
+        // Submit to database
+        tempDict.forEach((v, k) => {
+            if (databaseDict.has(k)) {
+                databaseDict.get(k).push(v);
+            }
+            else {
+                databaseDict.set(k,[v]);
+            }
+        });
+        // Clear tempDict
+        tempDict = new Map();
+        console.log(databaseDict);
     }
+
     function addDragedActivaty(target) {
         const id = target.split(" ");
-        let day = document.querySelector(`[id~="${id[id.length - 1]}"]`);
+        const dateID = id[id.length - 1];
+        let day = document.querySelector(`[id~="${dateID}"]`);
         // console.log(day);
 
         // Check target child node count
@@ -82,23 +119,29 @@
         // Only add activaty if it's not a duplacate.
         if (childs.length > 1 && childs[childs.length - 1].innerHTML == activityName) {
             return
+        }else {
+            // Save to temp dictionary
+            tempDict.set(dateID,[`${activityName}`, `${color}`, `${sTime}`, `${eTime}`]);
+
         }
+        // console.log(tempDict.entries())
 
         // If there is already 3 child nodes, dont add more.
         if (childs.length >= 3) {
-            let count = childs.length - 3;
+            let count = childs.length - 2;
+            tempInnerHTML = childs[childs.length - 1].innerHTML;
             childs[childs.length - 1].innerHTML = `+${++count}`;
 
         }else if (childs.length < 3) {
             // Add new activaty
             let act = document.createElement("div");
+            act.setAttribute("class", `${activityName}-${color}-${sTime}-${eTime}`);
             let actText = document.createTextNode(`${activityName}`);
             act.appendChild(actText);
 
             // Append
             day.appendChild(act);
 
-            let height = 50;
             // css
             $(act).css({
                 'width': '100%',
